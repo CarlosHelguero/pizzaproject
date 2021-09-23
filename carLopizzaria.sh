@@ -19,11 +19,77 @@ printf "1. mushrooms,\n2. onions,\n3. green peppers,\n4. pepperoni,\n 5. sasuage
 echo " "
 }
 #function that creates the pizza
-ordermenu()
+custompizza()
 {
 declare -a yourpizza=() #array where all the chosen topping go into
 
 #start empty beccause because customer hasnt selected any toppings yet
+while true 
+do
+	sleep 3 
+	clear
+	header
+	echo "pizza sizes"
+	echo " "
+	echo "1. small 2. Medium 3. large "
+	echo " "
+	read -p "please pick your size >>>> " pizzasize
+	echo " "
+	if (($pizzasize == 1 ))
+		then
+		echo "you pick a small pizza"
+		read -p "is this correct" selector
+		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
+			then	
+			echo "ok small pizza coming up"
+			sleep 2
+			break
+		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
+			then	
+			echo "returning ..."
+		else
+			echo "wrong input"
+		fi
+	elif (($pizzasize == 2 ))
+		then
+		echo "you pick a medium pizza"
+		read -p "is this correct" selector
+		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
+			then	
+			echo "ok medium pizza coming up"
+			sleep 2 
+			break
+		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
+			then	
+			echo "returning ..."
+		else
+			echo "wrong input"
+		fi
+		
+		
+	elif (($pizzasize == 3 ))
+		then
+		echo "you pick a large pizza"
+		read -p "is this correct" selector
+		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
+			then	
+			echo "ok large pizza coming up"
+			sleep 2
+			break
+		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
+			then	
+			echo "returning ..."
+		else
+			echo "wrong input"
+		fi
+	else
+		echo "pizza size not doable"
+		echo "returning"
+	fi
+	
+
+done
+
 
 while true 	#loops until customer is finished picking the toppings
 do
@@ -194,7 +260,7 @@ else
 	echo "wrong selection"
 fi
 done
-echo "lets start your order..."
 clear
-ordermenu
+echo "lets start your order..."
+custompizza
 
