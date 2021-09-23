@@ -38,7 +38,7 @@ do
 	if (($pizza == 1 ))
 		then
 		echo "you pick a small pizza"
-		read -p "is this correct" selector
+		read -p "is this correct (y/n) >>> " selector
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok small pizza coming up"
@@ -54,7 +54,7 @@ do
 	elif (($pizza == 2 ))
 		then
 		echo "you pick a medium pizza"
-		read -p "is this correct" selector
+		read -p "is this correct (y/n) >>> " selector
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok medium pizza coming up"
@@ -72,7 +72,7 @@ do
 	elif (($pizza == 3 ))
 		then
 		echo "you pick a large pizza"
-		read -p "is this correct" selector
+		read -p "is this correct (y/n) >>>" selector
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok large pizza coming up"
@@ -104,7 +104,7 @@ do
 	echo " "
 	toppings
 	#use numbers as selectors for pizza tppping 
-	read -p "pick a topping using the number" toppingresponce
+	read -p "pick a topping using the number or press x to finish >>> " toppingresponce
 	if (( $toppingresponce == 1 ))
 	then	#appends the topping to the array(yourpizza)
 		echo "you chose to add mushrooms to your pizza"
