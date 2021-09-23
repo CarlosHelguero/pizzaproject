@@ -177,6 +177,9 @@ delivery()
 header
 echo "we need some more infomation before we can continue"
 echo " "
+while true
+do
+
 read -p "what is your street address " address
 read -p "what is the city " city
 read -p "what is the state " state
@@ -184,17 +187,30 @@ read -p "what is your zip code " zip
 echo " " 
 #confirming the address prompt
 echo "saving ...."
-sleep 1
+sleep 3
 header
 echo "Showing saved address"
 echo " "
 echo "$address"
 echo "$city, $state $zip"
 echo " " 
-echo "is everything correct?"
+read -p "is everything correct? y/n " decision
 
+	if [ "$decision" == "y" ] || [ "$decision" == "Y" ]
+	then 
+		echo "saving address... "
+		echo "$address" >> ../pythonstuff/reciept.txt
+		echo "$city, $state $zip" >> ../pythonstuff/reciept.txt
+		break
+	elif [ "$decision" == "n" ] || [ "$decision" == "N" ]
+	then echo "Please, Enter new Address. "
+	else
+		echo "Wrong selection"
+fi
+done
 
 }
+
 ######################################################
 # first line of script here 
 clear
