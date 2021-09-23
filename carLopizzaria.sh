@@ -14,8 +14,8 @@ echo " "
 #we dont wanna keep typing this out 
 toppings()
 {
-echo " the is is the toppings menu"
-printf "1. mushrooms,\n2. onions,\n3. green peppers,\n4. pepperoni,\n 5. sasuage,\n6. bacon \n7. chicken"
+echo "this is the toppings menu"
+printf "1. mushrooms,\n2. onions,\n3. green peppers,\n4. pepperoni,\n5. sasuage,\n6. bacon \n7. chicken"
 echo " "
 }
 #function that creates the pizza
@@ -26,7 +26,7 @@ declare -a yourpizza=() #array where all the chosen topping go into
 #start empty beccause because customer hasnt selected any toppings yet
 while true 
 do
-	sleep 3 
+	sleep 2
 	clear
 	header
 	echo "pizza sizes"
@@ -42,6 +42,7 @@ do
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok small pizza coming up"
+			pizza='small'
 			sleep 2
 			break
 		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
@@ -57,6 +58,7 @@ do
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok medium pizza coming up"
+			pizza='medium'
 			sleep 2 
 			break
 		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
@@ -74,6 +76,7 @@ do
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok large pizza coming up"
+			pizza='large'
 			sleep 2
 			break
 		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
@@ -97,65 +100,68 @@ do
 	header
 	toppings
 	echo " "
+	echo $pizza
 	echo "your current toppings >> ${yourpizza[@]}"
 	echo " "
 	#use numbers as selectors for pizza tppping 
 	read -p "pick a topping using the number" toppingresponce
-	if (($toppingresponce == 1 ))
+	if (( $toppingresponce == 1 ))
 	then	#appends the topping to the array(yourpizza)
 		echo "you chose to add mushrooms to your pizza"
 		yourpizza=("${yourpizza[@]}" "mushroom")
 		echo "saving ..."
 		sleep 2
-	elif (($toppingresponce == 2 ))
+	elif (( $toppingresponce == 2 ))
 	then
 		yourpizza=("${yourpizza[@]}" "onions")
 		echo "you chose to add onions to your pizza"
 		echo "saving ..."
 		sleep 2
 
-	elif (($toppingresponce == 4 ))
+	elif (( $toppingresponce == 4 ))
         then
                 yourpizza=("${yourpizza[@]}" "pepperoni")
 		echo "you chose to add pepperoni to your pizza"
                 echo "saving ..."
                 sleep 2
-	elif (($toppingresponce == 3 ))
+	elif (( $toppingresponce == 3 ))
         then
                 yourpizza=("${yourpizza[@]}" "green peppers")
 		echo "you chose to add green peppers to your pizza"
                 echo "saving ..."
                 sleep 2
-	elif (($toppingresponce == 5 ))
+	elif (( $toppingresponce == 5 ))
         then
                 yourpizza=("${yourpizza[@]}" "suasage")
 		echo "you chose to add sausages to your pizza"
                 echo "saving ..."
                 sleep 2
-	elif (($toppingresponce == 6 ))
+	elif (( $toppingresponce == 6 ))
         then
                 yourpizza=("${yourpizza[@]}" "bacon")
 		echo "you chose to add bacon to your pizza"
                 echo "saving ..."
                 sleep 2
-	elif (($toppingresponce == 7 ))
+	elif (( $toppingresponce == 7 ))
         then
                 yourpizza=("${yourpizza[@]}" "chicken")
 		echo "you chose to add chicken to your pizza"
                 echo "saving ..."
                 sleep 2
 
-	elif (($toppingresponce == x ))
+	elif [ $toppingresponce == 'x' ]
 	then
 		echo "finished adding topping"
 		break
+	else
+		echo "i didnt quite understand what you wrote"
+		sleep 1 
 	#customer can press x to break loop once he has all the toppings
 	fi
 done 
 #prints all the toppings in the array
 echo "here are all the topping in your pizza"
 echo ${yourpizza[@]}
-
 
 
 }
@@ -263,4 +269,20 @@ done
 clear
 echo "lets start your order..."
 custompizza
+while true
+do
+	read -p "do you want to continue in making second pizza (y/n) >>> " selector
+	if [ "$selector" == "n" ] || [ "$selector" == "N" ]
+		then
+		echo "ok lets proced to check out"
+		break
+	elif [ "$selector" == "y" ] || [ "$selector" == "Y" ]
+		then
+		echo "ok lets make a new pizza"
+		custompizza
+	else
+		echo "sorry invalid answer "
+	fi
+done
+
 
