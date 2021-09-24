@@ -6,10 +6,10 @@ specialNumberOne(){
 totalOne=$(())
 }
 specialNumberTwo(){
-totalTwo=$(($1 + $2))
+totalTwo=$(())
 }
 specialNumberThree(){
-totalThree=$(($1 + $2))
+totalThree=$(())
 }
 
 

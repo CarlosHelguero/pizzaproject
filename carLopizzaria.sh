@@ -24,6 +24,7 @@ custompizza()
 declare -a yourpizza=() #array where all the chosen topping go into
 
 #start empty beccause because customer hasnt selected any toppings yet
+#pizza size selection
 while true 
 do
 	sleep 2
@@ -93,7 +94,7 @@ do
 
 done
 
-
+#When customers order topping
 while true 	#loops until customer is finished picking the toppings
 do
 	clear
@@ -159,6 +160,10 @@ do
 	#customer can press x to break loop once he has all the toppings
 	fi
 done 
+# end of toppings 
+
+
+
 #prints all the toppings in the array
 echo "here are all the topping in your pizza"
 #echo ${yourpizza[@]}
@@ -295,6 +300,8 @@ done
 clear
 echo "lets start your order..."
 custompizza
+
+#adding more pizzas
 while true
 do
 
