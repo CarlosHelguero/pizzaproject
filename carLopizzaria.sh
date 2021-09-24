@@ -1,6 +1,7 @@
 
 #!/bin/bash
 #calls the prompt where app name is
+total=0
 header()
 {
 clear
@@ -318,6 +319,8 @@ do
 		echo "sorry invalid answer "
 	fi
 done
+
+./payment.sh
 cat ../pythonstuff/reciept.txt
 
 
