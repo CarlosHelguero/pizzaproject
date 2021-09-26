@@ -15,6 +15,7 @@ while true
 do
 if (("$specials" == 1))
 then
+
         echo "Okay, this is a test comment"
         echo ""
         read -p "Would you like to select another special? [y or n]:" selection
