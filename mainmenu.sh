@@ -41,3 +41,7 @@ echo "10. Red Peppers"
 
 echo ""
 read -p "And what pizza size would you like today? [ 1-4 ]: " toppings
+
+#Loop need for the customer to select another pizza to the order
+#Print function needs to be added for the items selected to be printed back
+#to the user when selection are made.
