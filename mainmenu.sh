@@ -10,11 +10,12 @@ echo ""
 
 echo "1. Small Pizza."
 echo "2. Medium Pizza."
-echo "2. Large Pizza."
-echo "2. Extra Large Pizza."
+echo "3. Large Pizza."
+echo "4. Extra Large Pizza."
 
 echo ""
 read -p "What pizza size would you like today? [ 1-4 ]: " size
 echo ""
-
+echo "Pefect! Great selection."
+echo "What would you like on your pizza? [1 - ]" toppings
 
