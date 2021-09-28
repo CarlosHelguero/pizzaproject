@@ -45,6 +45,11 @@ do
 			then	
 			echo "ok small pizza coming up"
 			pizzasize='small'
+			total=$(( total + 8 ))
+			printf "\n#########################" >> pythonstuff/reciept.txt
+			printf "\nsmall pizza\n....................... 8\n" >> pythonstuff/reciept.txt
+			printf "\n#########################" >> pythonstuff/reciept.txt
+			#echo "####################" >> pythonstuff/reciept.txt
 			sleep 2
 			break
 		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
@@ -60,6 +65,10 @@ do
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
 			echo "ok medium pizza coming up"
+			total=$(( total + 10))
+			printf "\n#########################" >> pythonstuff/reciept.txt
+			printf "\nmedium pizza\n...................... 10\n" >> pythonstuff/reciept.txt
+			printf "\n#########################" >> pythonstuff/reciept.txt
 			pizzasize='medium'
 			sleep 2 
 			break
@@ -79,6 +88,10 @@ do
 			then	
 			echo "ok large pizza coming up"
 			pizzasize='large'
+			total=$(( total + 12 ))
+			printf "\n#########################" >> pythonstuff/reciept.txt
+			printf "\nlarge pizza\n...................... 12\n" >> pythonstuff/reciept.txt
+			printf "\n#########################" >> pythonstuff/reciept.txt
 			sleep 2
 			break
 		elif [ "$selector" == "n" ] || [ "$selector" == "N" ]
@@ -161,19 +174,14 @@ do
 	#customer can press x to break loop once he has all the toppings
 	fi
 done 
-# end of toppings 
-
-
-
-#prints all the toppings in the array
-echo "here are all the topping in your pizza"
+#end of toppings 
 #echo ${yourpizza[@]}
-echo "$pizzasize......................... 12" >> ../pythonstuff/reciept.txt
-echo "additional toppings" >> ../pythonstuff/reciept.txt
+printf "\n    additional toppings" >> pythonstuff/reciept.txt
 for i in "${yourpizza[@]}"
 	do
-		echo "$i ........................ 1" >> ../pythonstuff/reciept.txt
-	done
+		printf "\n$i \n                        1" >> pythonstuff/reciept.txt
+		total=$(( total + 1 ))
+done
 
 
 }
@@ -205,8 +213,8 @@ read -p "is everything correct? y/n " decision
 	if [ "$decision" == "y" ] || [ "$decision" == "Y" ]
 	then 
 		echo "saving address... "
-		echo "$address" >> ../pythonstuff/reciept.txt
-		echo "$city, $state $zip" >> ../pythonstuff/reciept.txt
+		echo "$address" >> pythonstuff/reciept.txt
+		echo "$city, $state $zip" >> pythonstuff/reciept.txt
 		break
 	elif [ "$decision" == "n" ] || [ "$decision" == "N" ]
 	then echo "Please, Enter new Address. "
@@ -220,7 +228,7 @@ done
 ######################################################
 # first line of script here 
 clear
-echo " " > ../pythonstuff/reciept.txt
+echo " " > pythonstuff/reciept.txt
 #animated header for pizza
 echo "welcome to Carlo Pizza" 
 sleep 1 
@@ -320,7 +328,11 @@ do
 	fi
 done
 
-./payment.sh
-cat ../pythonstuff/reciept.txt
+printf "\n########################" >> pythonstuff/reciept.txt
+echo " " >> pythonstuff/reciept.txt
+
+echo "total amount $total" >> pythonstuff/reciept.txt
+#./payment.sh
+cat pythonstuff/reciept.txt
 
 

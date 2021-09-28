@@ -1,0 +1,22 @@
+ 
+
+########################
+small pizza
+....................... 8
+
+    additional toppings
+onions 
+                        1
+green peppers 
+                        1
+########################
+medium pizza
+...................... 10
+
+    additional toppings
+bacon 
+                        1
+chicken 
+                        1
+######################## 
+total amount 22
