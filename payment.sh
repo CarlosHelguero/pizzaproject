@@ -86,11 +86,11 @@ echo " "
 					echo " "
 					echo "Saving payment information... "
 					echo " "
-					echo "********************************* " >> ../pythonstuff/reciept.txt
-					echo "Payment Information: " >> ../pythonstuff/reciept.txt
-					echo "$firsName" "$lastName" >> ../pythonstuff/reciept.txt
-                        		echo "$address, $city, $state, $zipCode" >> ../pythonstuff/reciept.txt
-					echo "$card, $carddate, $cardcode" >> ../pythonstuff/reciept.txt
+					echo "********************************* " >> pythonstuff/reciept.txt
+					echo "Payment Information: " >> pythonstuff/reciept.txt
+					echo "$firsName" "$lastName" >> pythonstuff/reciept.txt
+                        		echo "$address, $city, $state, $zipCode" >> pythonstuff/reciept.txt
+					echo "$card, $carddate, $cardcode" >> pythonstuff/reciept.txt
                				break
 
 				elif [ "$cardaddress" == "n" ] || [ "$cardaddress" == "N" ]
@@ -105,10 +105,10 @@ echo " "
 					echo " "
 					echo "Saving payment information... "
                                         echo " "
-					echo "********************************** " >> ../pythonstuff/reciept.txt
-                                        echo "$firstName" "$lastName" >> ../pythonstuff/reciept.txt
-                                        echo "$caddress, $ccity, $cstate, $czip" >> ../pythonstuff/reciept.txt
-                                        echo "$card, $carddate, $cardcode" >> ../pythonstuff/reciept.txt
+					echo "********************************** " >> pythonstuff/reciept.txt
+                                        echo "$firstName" "$lastName" >> pythonstuff/reciept.txt
+                                        echo "$caddress, $ccity, $cstate, $czip" >> pythonstuff/reciept.txt
+                                        echo "$card, $carddate, $cardcode" >> pythonstuff/reciept.txt
 				else
 					echo "Short Circuit ;)"
 				fi
