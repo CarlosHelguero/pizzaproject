@@ -16,6 +16,12 @@ read -p "What pizza size would you like today? [ 1-4 ]: " size
 echo ""
 
 echo ""
+echo "1. Hand-Tossed."
+echo "2. Crunchy Thin."
+echo "3. Brookyln Style."
+echo ""
+echo "What type of crust would you like? [ 1-3 ]:" crust
+
 
 echo "1. Marinara Sauce"
 echo "2. Honey BBQ Sauce"
