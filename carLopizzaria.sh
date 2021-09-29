@@ -207,11 +207,14 @@ done
 
 }
 #this function is used to get the customers address when he picks delivery
-delivery()
+billing()
 {
 header
 echo "We need some more infomation before we can continue"
 echo " "
+
+
+
 while true
 do
 
@@ -247,7 +250,41 @@ echo " "
 fi
 done
 
-}
+echo "Please provide your payment information."
+echo " "
+# While true for payment and to confirm address
+while true
+do
+
+	read -p "Last four of credit card " card
+	read -p "Expiration Date MM/YY " carddate
+	read -p "Security code on back/front " cardcode
+	echo " "
+	echo "Thank you!"
+	sleep 1
+	clear
+	echo " "
+	echo "Card - $card"
+	echo "Date - $carddate"
+	echo "Code - $cardcode"
+	echo " "
+	read -p "Does everything look correct? [y or n] " cardconfirm
+	echo " "
+# Confirming the payment information 
+	if [ "$cardconfirm" == "y" ] || [ "$cardconfirm" == "Y" ]
+        then 
+        echo "Saving card information... "
+        sleep 1
+		break
+
+	elif [ "$cardconfirm" == "n" ] || [ "$cardconfirm" == "N" ]
+		then 
+		echo "reenter pls"
+		sleep 1
+	fi
+done
+}		 
+
 
 ######################################################
 # first line of script here 
@@ -294,7 +331,7 @@ do
 			#calls the header prompt
 			header
 			#calls for the delivery prompt
-			delivery
+			
  			#break loops once yes is enter
 			#moves on to toppings stage
 			break
@@ -359,7 +396,14 @@ printf "\n########################" >> pythonstuff/reciept.txt
 echo " " >> pythonstuff/reciept.txt
 
 echo "total amount $total" >> pythonstuff/reciept.txt
-#./payment.sh
+if (($typeoforder == 1 ))
+then
+	./payment.sh
+elif (($typeoforder == 2 ))
+then 
+	delivery
+
+fi
 cat pythonstuff/reciept.txt
 
 
