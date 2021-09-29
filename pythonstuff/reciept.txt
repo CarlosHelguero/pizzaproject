@@ -1,6 +1,4 @@
  
-3434 main st
-cary, nc 23234
 
 #########################
 small pizza
@@ -8,7 +6,9 @@ small pizza
 
 #########################
     additional toppings
-mushroom 
+onions 
+                        1
+green peppers 
                         1
 ######################## 
-total amount 9
+total amount 10

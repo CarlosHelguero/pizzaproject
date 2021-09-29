@@ -66,10 +66,10 @@ echo " "
         then 
                 echo "Saving payment information... "
                 echo " "
-                echo "********************************* " >> ../pythonstuff/reciept.txt
-                echo "Payment Information: " >> ../pythonstuff/reciept.txt
-                echo "$address, $city, $state, $zipCode" >> ../pythonstuff/reciept.txt
-                echo "$card, $carddate, $cardcode" >> ../pythonstuff/reciept.txt
+                echo "********************************* " >> pythonstuff/reciept.txt
+                echo "Payment Information: " >> pythonstuff/reciept.txt
+                echo "$address, $city, $state, $zipCode" >> pythonstuff/reciept.txt
+                echo "$card, $carddate, $cardcode" >> pythonstuff/reciept.txt
                 sleep 1
                 break
 	elif [ "$cardconfirm" == "n" ] || [ "$cardconfirm" == "N" ]
