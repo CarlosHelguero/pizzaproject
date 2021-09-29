@@ -1,8 +1,8 @@
  
 
 #########################
-medium pizza
-...................... 10
+small pizza
+....................... 8
 
 #########################
     additional toppings
@@ -11,4 +11,4 @@ onions
 green peppers 
                         1
 ######################## 
-total amount 12
+total amount 10

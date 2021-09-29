@@ -401,7 +401,7 @@ then
 	./payment.sh
 elif (($typeoforder == 2 ))
 then 
-	delivery
+	billing
 
 fi
 cat pythonstuff/reciept.txt
