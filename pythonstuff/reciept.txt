@@ -1,22 +1,14 @@
  
+3434 main st
+cary, nc 23234
 
-########################
+#########################
 small pizza
 ....................... 8
 
+#########################
     additional toppings
-onions 
-                        1
-green peppers 
-                        1
-########################
-medium pizza
-...................... 10
-
-    additional toppings
-bacon 
-                        1
-chicken 
+mushroom 
                         1
 ######################## 
-total amount 22
+total amount 9

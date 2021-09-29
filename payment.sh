@@ -25,7 +25,7 @@ echo " "
 echo "$firstName" "$lastName"
 echo "$address, $city, $state, $zipCode, and $phoneNumber."
 echo " "
-read -p "Do I have the order name correct? [y or n]: " orderName
+read -p "Is this correct? [y or n]: " orderName
 
 if [ "$orderName" == "y" ] || [ "$orderName" == "Y" ]
 then
@@ -39,15 +39,13 @@ then
          echo "Okay, please make the corrections."
 #
 else
-         echo ""
+         echo "Short Circuit ;)"
 fi
 done
 
 
-
-
 clear
-header
+
 # Start of payment collection
 echo "Thank you for your order!"
 echo " "
@@ -88,7 +86,9 @@ echo " "
 					echo " "
 					echo "Saving payment information... "
 					echo " "
-					echo "$firstName" "$lastName" > ../pythonstuff/reciept.txt
+					echo "********************************* " >> ../pythonstuff/reciept.txt
+					echo "Payment Information: " >> ../pythonstuff/reciept.txt
+					echo "$firsName" "$lastName" >> ../pythonstuff/reciept.txt
                         		echo "$address, $city, $state, $zipCode" >> ../pythonstuff/reciept.txt
 					echo "$card, $carddate, $cardcode" >> ../pythonstuff/reciept.txt
                				break
@@ -101,22 +101,24 @@ echo " "
 					read -p "what is your street address " caddress
 					read -p "what is the city " ccity
 					read -p "what is the state " cstate
-					read -p "what is your zip code " czipcode
+					read -p "what is your zip code " czip
 					echo " "
 					echo "Saving payment information... "
                                         echo " "
-                                        echo "$firstName" "$lastName" > ../pythonstuff/reciept.txt
-                                        echo "$caddress, $ccity, $cstate, $czipCode" >> ../pythonstuff/reciept.txt
+					echo "********************************** " >> ../pythonstuff/reciept.txt
+                                        echo "$firstName" "$lastName" >> ../pythonstuff/reciept.txt
+                                        echo "$caddress, $ccity, $cstate, $czip" >> ../pythonstuff/reciept.txt
                                         echo "$card, $carddate, $cardcode" >> ../pythonstuff/reciept.txt
 				else
-					echo "Unrecognized Entry"
+					echo "Short Circuit ;)"
 				fi
 		break
         elif [ "$cardconfirm" == "n" ] || [ "$cardconfirm" == "N" ]
-	then echo "Please, Enter new credit/debit card information. "
-	echo " "
+	then
+		echo "Please, Enter new credit/debit card information. "
+		echo " "
         else
-             echo "Wrong selection"
+		echo "Short Circuit ;)"
 
 fi
 done

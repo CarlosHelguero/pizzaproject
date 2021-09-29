@@ -16,6 +16,7 @@ echo " "
 toppings()
 {
 echo "this is the toppings menu"
+echo " "
 printf "1. mushrooms,\n2. onions,\n3. green peppers,\n4. pepperoni,\n5. sasuage,\n6. bacon \n7. chicken"
 echo " "
 }
@@ -39,10 +40,13 @@ do
 	echo " "
 	if (($pizza == 1 ))
 		then
-		echo "you pick a small pizza"
+		echo " "
+		echo "you picked a small pizza"
+		echo " "
 		read -p "is this correct (y/n) >>> " selector
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
+			echo " "
 			echo "ok small pizza coming up"
 			pizzasize='small'
 			total=$(( total + 8 ))
@@ -60,10 +64,13 @@ do
 		fi
 	elif (($pizza == 2 ))
 		then
-		echo "you pick a medium pizza"
+		echo " "
+		echo "you picked a medium pizza"
+		echo " "
 		read -p "is this correct (y/n) >>> " selector
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
+			echo " "
 			echo "ok medium pizza coming up"
 			total=$(( total + 10))
 			printf "\n#########################" >> pythonstuff/reciept.txt
@@ -82,10 +89,13 @@ do
 		
 	elif (($pizza == 3 ))
 		then
-		echo "you pick a large pizza"
+		echo " "
+		echo "you picked a large pizza"
+		echo " "
 		read -p "is this correct (y/n) >>>" selector
 		if [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 			then	
+			echo " "
 			echo "ok large pizza coming up"
 			pizzasize='large'
 			total=$(( total + 12 ))
@@ -102,6 +112,7 @@ do
 		fi
 	else
 		echo "pizza size not doable"
+		echo " "
 		echo "returning"
 	fi
 	
@@ -113,23 +124,28 @@ while true 	#loops until customer is finished picking the toppings
 do
 	clear
 	header
+	echo " "
 	echo "your pizza size is $pizzasize"
 	echo " "
 	echo "your current toppings >> ${yourpizza[@]}"
 	echo " "
 	toppings
+	echo " "
 	#use numbers as selectors for pizza tppping 
 	read -p "pick a topping using the number or press x to finish >>> " toppingresponce
+	echo " "
 	if (( $toppingresponce == 1 ))
 	then	#appends the topping to the array(yourpizza)
 		echo "you chose to add mushrooms to your pizza"
 		yourpizza=("${yourpizza[@]}" "mushroom")
+		echo " "
 		echo "saving ..."
 		sleep 2
 	elif (( $toppingresponce == 2 ))
 	then
 		yourpizza=("${yourpizza[@]}" "onions")
 		echo "you chose to add onions to your pizza"
+		echo " "
 		echo "saving ..."
 		sleep 2
 
@@ -137,30 +153,35 @@ do
         then
                 yourpizza=("${yourpizza[@]}" "pepperoni")
 		echo "you chose to add pepperoni to your pizza"
+		echo " "
                 echo "saving ..."
                 sleep 2
 	elif (( $toppingresponce == 3 ))
         then
                 yourpizza=("${yourpizza[@]}" "green peppers")
 		echo "you chose to add green peppers to your pizza"
+		echo " "
                 echo "saving ..."
                 sleep 2
 	elif (( $toppingresponce == 5 ))
         then
                 yourpizza=("${yourpizza[@]}" "suasage")
 		echo "you chose to add sausages to your pizza"
+		echo " "
                 echo "saving ..."
                 sleep 2
 	elif (( $toppingresponce == 6 ))
         then
                 yourpizza=("${yourpizza[@]}" "bacon")
 		echo "you chose to add bacon to your pizza"
+		echo " "
                 echo "saving ..."
                 sleep 2
 	elif (( $toppingresponce == 7 ))
         then
                 yourpizza=("${yourpizza[@]}" "chicken")
 		echo "you chose to add chicken to your pizza"
+		echo " "
                 echo "saving ..."
                 sleep 2
 
@@ -169,7 +190,7 @@ do
 		echo "finished adding topping"
 		break
 	else
-		echo "i didnt quite understand what you wrote"
+		echo "I didnt quite understand what you wrote"
 		sleep 1 
 	#customer can press x to break loop once he has all the toppings
 	fi
@@ -189,7 +210,7 @@ done
 delivery()
 {
 header
-echo "we need some more infomation before we can continue"
+echo "We need some more infomation before we can continue"
 echo " "
 while true
 do
@@ -209,7 +230,7 @@ echo "$address"
 echo "$city, $state $zip"
 echo " " 
 read -p "is everything correct? y/n " decision
-
+echo " "
 	if [ "$decision" == "y" ] || [ "$decision" == "Y" ]
 	then 
 		echo "saving address... "
@@ -217,7 +238,10 @@ read -p "is everything correct? y/n " decision
 		echo "$city, $state $zip" >> pythonstuff/reciept.txt
 		break
 	elif [ "$decision" == "n" ] || [ "$decision" == "N" ]
-	then echo "Please, Enter new Address. "
+	then
+		echo " "
+		echo "Please, Enter new Address. "
+		echo " "
 	else
 		echo "Wrong selection"
 fi
@@ -252,8 +276,10 @@ do
 	echo "order selection:"
 	echo "1. Delivery "
 	echo "2. Carry out"
+	echo " "
 	#user prompt for delivery or carry out 
 	read -p "pick one of the options above using the numbers " typeoforder
+	echo " "
 	#decision process for ordering 
 	if (($typeoforder == 1 ))
 	then
@@ -289,17 +315,17 @@ do
 		#same logic process from delivery 
 		read -p "you chose a carry-out! is this correct? y/n " selection 
 		if [ "$selection" == "y" ] || [ "$selection" == "Y" ]
-        then 
+        	then 
 			break
         
 		elif [ "$selection" == "n" ] || [ "$selection" == "N" ]
-        then
-            echo "returning to service selection"
-            sleep 1 
-        else
-            echo "wrong selection"
-            sleep 1 
-        fi
+        	then
+            		echo "returning to service selection"
+            		sleep 1 
+        	else
+            		echo "wrong selection"
+            		sleep 1 
+        	fi
 	else
 		echo "wrong selection"
 	
@@ -313,8 +339,9 @@ custompizza
 #adding more pizzas
 while true
 do
-
+	echo " "
 	read -p "do you want to continue in adding another pizza (y/n) >>> " selector
+	echo " "
 	if [ "$selector" == "n" ] || [ "$selector" == "N" ]
 		then
 		echo "ok lets proced to check out"
