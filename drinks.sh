@@ -14,6 +14,7 @@ echo "6.) Sweet-Tea"
 
 echo "We also have drink options that are available."
 echo ""
+echo ""
 read -p "Would you like to add a drink to your order today? [ y or n ]: " drinks
     if [ "$drinks" == "y" ] || [ "$drinks" == "Y" ]
 
@@ -201,4 +202,4 @@ read -p "Would you like to add a drink to your order today? [ y or n ]: " drinks
                 break
                 fi
             done
-fi
+    fi
