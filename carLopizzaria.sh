@@ -396,14 +396,18 @@ printf "\n########################" >> pythonstuff/reciept.txt
 echo " " >> pythonstuff/reciept.txt
 
 echo "total amount $total" >> pythonstuff/reciept.txt
-if (($typeoforder == 1 ))
-then
-	./payment.sh
-elif (($typeoforder == 2 ))
-then 
-	billing
+. drinks.sh
+echo "Hello, ${totals}!"
+drinktotal=${totals}
+# if (($typeoforder == 1 ))
+# then
+# 	./payment.sh
+# elif (($typeoforder == 2 ))
+# then 
+# 	billing
 
-fi
+# fi
 cat pythonstuff/reciept.txt
 
-
+total=$(( total + drinktotal))
+echo $total
