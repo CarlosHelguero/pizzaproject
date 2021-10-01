@@ -1,14 +1,82 @@
- special deal 1 ----- 25
-
-#########################
-medium pizza
-...................... 10
-
-    additional toppings
-mushroom 
-                        1
-onions 
-                        1
-######################## 
-Coke 2.00
-total amount 39
+ special deal 2 ----- 28
+    specials 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+    specials 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+ 
+    1-Large Meat Lovers Pizza, 
+    1-Medium Cheese Pizza, 
+    1-Medium Pepperoni Pizza,
+    2 2-Liter        for $ 28.00
+ 
+3.) 2-Large Pepperoni Pizza,
+    2-Large Cheese Pizza
+    2 2-Liter       for $ 31.00
+ 
+3.) 2-Large Pepperoni Pizza,
+    2-Large Cheese Pizza
+    2 2-Liter       for $ 31.00
+ 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+ 
+    1-Large Meat Lovers Pizza, 
+    1-Medium Cheese Pizza, 
+    1-Medium Pepperoni Pizza,
+    2 2-Liter        for $ 28.00
+ 
+    specials 
+    1-Large Meat Lovers Pizza, 
+    1-Medium Cheese Pizza, 
+    1-Medium Pepperoni Pizza,
+    2 2-Liter        for $ 28.00
+ 
+    specials 
+    1-Large Meat Lovers Pizza, 
+    1-Medium Cheese Pizza, 
+    1-Medium Pepperoni Pizza,
+    2 2-Liter        for $ 28.00
+ 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+ 
+    2-Large Pepperoni Pizza,
+    2-Large Cheese Pizza
+    2 2-Liter       for $ 31.00
+ 
+    specials 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+ 
+    1-Large Meat Lovers Pizza, 
+    1-Medium Cheese Pizza, 
+    1-Medium Pepperoni Pizza,
+    2 2-Liter        for $ 28.00
+ 
+    2-Large Pepperoni Pizza,
+    2-Large Cheese Pizza
+    2 2-Liter       for $ 31.00
+ 
+    specials 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+ 
+    1-Large Meat Lovers Pizza, 
+    1-Medium Cheese Pizza, 
+    1-Medium Pepperoni Pizza,
+    2 2-Liter        for $ 28.00
+ 

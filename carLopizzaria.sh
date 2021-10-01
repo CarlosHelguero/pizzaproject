@@ -2,6 +2,47 @@
 #!/bin/bash
 #calls the prompt where app name is
 total=0
+lastfunction()
+{
+while true 
+do
+	read -p "do you want to make you own pizza now? (y/n) " yesorno
+	if [ "$yesorno" == "y" ] || [ "$yesorno" == "Y" ]
+	then
+		custompizzacall
+		break
+	elif [ "$yesorno" == "n" ] || [ "$yesorno" == "N" ]
+	then 
+		echo "ok no worries $name"
+		break
+	else
+			echo "no comprende"
+	fi
+done
+}
+custompizzacall()
+{
+echo "ok $name we shall make your own custom pizza"
+		custompizza
+		while true
+		do
+			echo " "
+			read -p "do you want to continue in adding another pizza (y/n) >>> " selector
+			echo " "
+			if [ "$selector" == "n" ] || [ "$selector" == "N" ]
+				then
+				echo "ALL YOUR PIZZAS HAVE BEEN SAVE $name :)"
+				sleep 2
+				break
+			elif [ "$selector" == "y" ] || [ "$selector" == "Y" ]
+				then
+				echo "ok lets make a new pizza"
+				custompizza
+			else
+				echo "sorry invalid answer "
+			fi
+		done
+}
 header()
 {
 clear
@@ -327,33 +368,31 @@ do
 	fi
 
 done
-clear
-echo "lets start your order..."
-. specialpizza.sh
-specialtotal=${totalspecial}
-total=$(( total + specialtotal ))
-custompizza
 
-#adding more pizzas
 while true
 do
+	clear
+	header
+	echo "lets start your order..."
 	echo " "
-	read -p "do you want to continue in adding another pizza (y/n) >>> " selector
-	echo " "
-	if [ "$selector" == "n" ] || [ "$selector" == "N" ]
-		then
-		echo "ALL YOUR PIZZAS HAVE BEEN SAVE $name :)"
-		sleep 2
+	echo "$name, we have some pizza deals available for you"
+	read -p "do you want to take a look? (y/n) " yesorno
+	if [ "$yesorno" == "y" ] || [ "$yesorno" == "Y" ]
+	then
+		. specialpizza.sh
+		specialtotal=${totalspecial}
+		total=$(( total + specialtotal ))
+		lastfunction
 		break
-	elif [ "$selector" == "y" ] || [ "$selector" == "Y" ]
-		then
-		echo "ok lets make a new pizza"
-		custompizza
+
+	elif [ "$yesorno" == "n" ] || [ "$yesorno" == "N" ]
+	then	
+		custompizzacall
+		break
 	else
-		echo "sorry invalid answer "
+		echo "can you type better!!!"
 	fi
 done
-
 printf "\n########################" >> pythonstuff/reciept.txt
 echo " " >> pythonstuff/reciept.txt
 
