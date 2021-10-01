@@ -414,6 +414,19 @@ then
 fi
 
 header
+echo "generating"
+sleep 1 
+printf '.'
+sleep 1
+printf '.'
+sleep 1
+printf '.'
+sleep 1
+echo " "
+sleep 1
+clear
+echo "  summary"
+cat pythonstuff/reciept.txt
 echo "processing"
 sleep 1 
 printf '.'
@@ -423,8 +436,6 @@ sleep 1
 printf '.'
 sleep 1
 echo " "
-echo "  summary"
-cat pythonstuff/reciept.txt
 
 echo " "
 echo "SUCCESS!"
