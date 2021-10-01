@@ -1,18 +1,1 @@
  
-
-#########################
-medium pizza
-...................... 10
-
-    additional toppings
-mushroom 
-                        1
-######################## 
-total amount 11
-
-
-Coke 2.00
-Sprite 2.00
-Orange Fanta 2.00
-Lemonade 1.00
-Sprite 2.00

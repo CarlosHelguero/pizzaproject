@@ -398,14 +398,14 @@ echo "total amount $total" >> pythonstuff/reciept.txt
 . drinks.sh
 echo "Hello, ${totals}!"
 drinktotal=${totals}
-# if (($typeoforder == 1 ))
-# then
-# 	./payment.sh
-# elif (($typeoforder == 2 ))
-# then 
-# 	billing
+if (($typeoforder == 1 ))
+then
+	./payment.sh
+elif (($typeoforder == 2 ))
+then 
+billing
 
-# fi
+fi
 cat pythonstuff/reciept.txt
 
 total=$(( total + drinktotal))
