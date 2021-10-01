@@ -23,7 +23,8 @@ echo " "
 echo "The delivery information that I have is..."
 echo " "
 echo "$firstName" "$lastName"
-echo "$address, $city, $state, $zipCode, and $phoneNumber."
+echo "$address, $city, $state, $zipCode"
+echo "$phoneNumber."
 echo " "
 read -p "Is this correct? [y or n]: " orderName
 
@@ -32,6 +33,8 @@ then
          echo ""
          echo "Okay! "
          echo ""
+		 sleep 1
+		 
 break
 #Delivery Information (name, number, address)
 elif [ "$orderType" == "n" ] || [ "$orderType" == "N" ]
@@ -63,9 +66,8 @@ echo "Thank you!"
 sleep 1
 clear
 echo " "
-echo "Card - $card"
-echo "Date - $carddate"
-echo "Code - $cardcode"
+echo "Card - ####-####-####-$card"
+echo "Date - $carddate  Code - $cardcode"
 echo " "
 read -p "Does everything look correct? [y or n] " cardconfirm
 echo " "
@@ -88,10 +90,12 @@ echo " "
 					echo " "
 					echo "********************************* " >> pythonstuff/reciept.txt
 					echo "Payment Information: " >> pythonstuff/reciept.txt
-					echo "$firsName" "$lastName" >> pythonstuff/reciept.txt
-                        		echo "$address, $city, $state, $zipCode" >> pythonstuff/reciept.txt
-					echo "$card, $carddate, $cardcode" >> pythonstuff/reciept.txt
-               				break
+					echo "$firsName $lastName" >> pythonstuff/reciept.txt
+                    echo "$address" >> pythonstuff/reciept.txt
+					echo "$city, $state, $zipCode" >> pythonstuff/reciept.txt
+					echo "####-####-####-$card," >> pythonstuff/reciept.txt
+					echo "$carddate, $cardcode" >> pythonstuff/reciept.txt
+               		break
 
 				elif [ "$cardaddress" == "n" ] || [ "$cardaddress" == "N" ]
 				then
@@ -104,11 +108,13 @@ echo " "
 					read -p "what is your zip code " czip
 					echo " "
 					echo "Saving payment information... "
-                                        echo " "
+                    echo " "
 					echo "********************************** " >> pythonstuff/reciept.txt
-                                        echo "$firstName" "$lastName" >> pythonstuff/reciept.txt
-                                        echo "$caddress, $ccity, $cstate, $czip" >> pythonstuff/reciept.txt
-                                        echo "$card, $carddate, $cardcode" >> pythonstuff/reciept.txt
+                    echo "$firstName" "$lastName" >> pythonstuff/reciept.txt
+                    echo "$caddress" >> pythonstuff/reciept.txt
+					echo "$ccity, $cstate, $czip" >> pythonstuff/reciept.txt
+                    echo "####-####-####-$card" >> pythonstuff/reciept.txt
+					echo "$carddate, $cardcode" >> pythonstuff/reciept.txt
 				else
 					echo "Short Circuit ;)"
 				fi
@@ -122,7 +128,6 @@ echo " "
 
 fi
 done
-
 
 sleep 1
 clear

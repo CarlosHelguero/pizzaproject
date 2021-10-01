@@ -29,7 +29,7 @@ read -p "Would you like to add a drink to your order today? [ y or n ]: " drinks
             while true
            
             do
-            echo "$totals"
+            
             soda
             read -p "Which drink would you like? [1-6]: " specials
                 if (("$specials" == 1))

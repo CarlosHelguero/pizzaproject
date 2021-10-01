@@ -1,1 +1,16 @@
  
+
+#########################
+large pizza
+...................... 12
+
+#########################
+    additional toppings
+onions 
+                        1
+green peppers 
+                        1
+######################## 
+Sprite 2.00
+Sprite 2.00
+total amount 18

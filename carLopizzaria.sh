@@ -209,46 +209,6 @@ done
 billing()
 {
 header
-echo "We need some more infomation before we can continue"
-echo " "
-
-
-
-while true
-do
-
-read -p "what is your street address " address
-read -p "what is the city " city
-read -p "what is the state " state
-read -p "what is your zip code " zip
-echo " " 
-#confirming the address prompt
-echo "saving ...."
-sleep 3
-header
-echo "Showing saved address"
-echo " "
-echo "$address"
-echo "$city, $state $zip"
-echo " " 
-read -p "is everything correct? y/n " decision
-echo " "
-	if [ "$decision" == "y" ] || [ "$decision" == "Y" ]
-	then 
-		echo "saving address... "
-		echo "$address" >> pythonstuff/reciept.txt
-		echo "$city, $state $zip" >> pythonstuff/reciept.txt
-		break
-	elif [ "$decision" == "n" ] || [ "$decision" == "N" ]
-	then
-		echo " "
-		echo "Please, Enter new Address. "
-		echo " "
-	else
-		echo "Wrong selection"
-fi
-done
-
 echo "Please provide your payment information."
 echo " "
 # While true for payment and to confirm address
@@ -263,9 +223,8 @@ do
 	sleep 1
 	clear
 	echo " "
-	echo "Card - $card"
-	echo "Date - $carddate"
-	echo "Code - $cardcode"
+	echo "Card - ####-####-####-$card"
+	echo "Date - $carddate, Code - $cardcode"
 	echo " "
 	read -p "Does everything look correct? [y or n] " cardconfirm
 	echo " "
@@ -307,7 +266,7 @@ while true
 do 
 	clear
 	header
-	echo "what would you like to do "
+	echo "what would you like to do $name"
 	echo " "
 	echo "order selection:"
 	echo "1. Delivery "
@@ -380,7 +339,8 @@ do
 	echo " "
 	if [ "$selector" == "n" ] || [ "$selector" == "N" ]
 		then
-		echo "ok lets proced to check out"
+		echo "ALL YOUR PIZZAS HAVE BEEN SAVE $name :)"
+		sleep 2
 		break
 	elif [ "$selector" == "y" ] || [ "$selector" == "Y" ]
 		then
@@ -394,19 +354,35 @@ done
 printf "\n########################" >> pythonstuff/reciept.txt
 echo " " >> pythonstuff/reciept.txt
 
-echo "total amount $total" >> pythonstuff/reciept.txt
+clear 
+header 
+echo " "
 . drinks.sh
-echo "Hello, ${totals}!"
 drinktotal=${totals}
-if (($typeoforder == 1 ))
+clear
+total=$(( total + drinktotal))
+echo "total amount $total" >> pythonstuff/reciept.txt
+if (( $typeoforder == 1 ))
 then
 	./payment.sh
-elif (($typeoforder == 2 ))
+elif (( $typeoforder == 2 ))
 then 
-billing
+	billing
 
 fi
+
+header
+echo "processing"
+sleep 1 
+printf '.'
+sleep 1
+printf '.'
+sleep 1
+printf '.'
+sleep 1
 cat pythonstuff/reciept.txt
 
-total=$(( total + drinktotal))
-echo $total
+echo " "
+echo "SUCCESS!"
+echo "your card has been charged $total.00" 
+
