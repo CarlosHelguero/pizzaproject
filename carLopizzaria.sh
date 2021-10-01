@@ -329,6 +329,9 @@ do
 done
 clear
 echo "lets start your order..."
+. specialpizza.sh
+specialtotal=${totalspecial}
+total=$(( total + specialtotal ))
 custompizza
 
 #adding more pizzas
@@ -380,6 +383,8 @@ printf '.'
 sleep 1
 printf '.'
 sleep 1
+echo " "
+echo "  summary"
 cat pythonstuff/reciept.txt
 
 echo " "

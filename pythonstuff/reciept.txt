@@ -1,16 +1,14 @@
- 
+ special deal 1 ----- 25
 
 #########################
-large pizza
-...................... 12
+medium pizza
+...................... 10
 
-#########################
     additional toppings
+mushroom 
+                        1
 onions 
                         1
-green peppers 
-                        1
 ######################## 
-Sprite 2.00
-Sprite 2.00
-total amount 18
+Coke 2.00
+total amount 39
