@@ -27,21 +27,23 @@ read -p "Would you like to add a drink to your order today? [ y or n ]: " drinks
         echo ""
             # place drinks menu scricpt here
             while true
+           
             do
+            echo "$totals"
             soda
             read -p "Which drink would you like? [1-6]: " specials
                 if (("$specials" == 1))
                 then
                         echo "Okay, a coke will be added to your order"
                         echo ""
-                        totals=$(( totalss + 2 ))
-                        echo "Orange Fanta 2.00" >> pythonstuff/reciept.txt
+                        totals=$(( totals + 2 ))
+                        echo "Coke 2.00" >> pythonstuff/reciept.txt
                         read -p "Would you like to select another soda? [y or n]:" selection
                         #If the customer want to select another special pizza to add to there order
                         if [ "$selection" == "y" ] || [ "$selection" == "Y" ]
                         then
 
-                        prompt
+                       
 
                         echo "Which soda would you like? [1-6]: "
 
@@ -92,7 +94,7 @@ read -p "Would you like to add a drink to your order today? [ y or n ]: " drinks
                 then
                         echo "Okay, a moutain dew will be added to your order"
                         echo ""
-                        totals=$(( totals + 2))
+                        totals=$(( totals + 2 ))
                         echo "Moutain Dew 2.00" >> pythonstuff/reciept.txt
                         read -p "Would you like to select another soda? [y or n]:" selection
                         #If the customer want to select another special pizza to add to there order
@@ -123,6 +125,7 @@ read -p "Would you like to add a drink to your order today? [ y or n ]: " drinks
                         echo "Okay, Orange Fanta will be added to your order"
                         echo ""
                         totals=$(( totals + 2 ))
+                        echo "Orange Fanta 2.00" >> pythonstuff/reciept.txt
                         read -p "Would you like to select another soda? [y or n]:" selection
                         #If the customer want to select another special pizza to add to there order
 

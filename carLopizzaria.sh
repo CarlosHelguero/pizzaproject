@@ -75,7 +75,6 @@ do
 			total=$(( total + 10))
 			printf "\n#########################" >> pythonstuff/reciept.txt
 			printf "\nmedium pizza\n...................... 10\n" >> pythonstuff/reciept.txt
-			printf "\n#########################" >> pythonstuff/reciept.txt
 			pizzasize='medium'
 			sleep 2 
 			break
