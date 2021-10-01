@@ -1,13 +1,19 @@
  
+    specials 
+    1-Large Pepperoni Pizza,
+    1 Large Cheese Pizza
+    1 2-Liter        for $ 25.00
+ 
 
 #########################
 medium pizza
 ...................... 10
 
     additional toppings
+mushroom 
+                        1
 onions 
                         1
 ######################## 
-Coke 2.00
-Lemonade 1.00
-total amount 14
+Sprite 2.00
+total amount 39

@@ -44,9 +44,9 @@ read -p "Which one of the special would you like? [1-3] or press any other key t
     then
         echo "Okay, you have selected special #1"
         totalspecial=$(( totalspecial + 25))
-        echo "    1-Large Pepperoni Pizza,"  >> pythonstuff/reciept.txt
-        echo "    1 Large Cheese Pizza"  >> pythonstuff/reciept.txt
-        echo "    1 2-Liter        for $ 25.00" >> pythonstuff/reciept.txt
+        echo "1-Large Pepperoni Pizza,"  >> pythonstuff/reciept.txt
+        echo "1 Large Cheese Pizza"  >> pythonstuff/reciept.txt
+        echo "1 2-Liter        for $ 25.00" >> pythonstuff/reciept.txt
         echo " "  >> pythonstuff/reciept.txt
         sleep 1 
         deals=("${deals[@]}" "deal 1")
@@ -55,10 +55,10 @@ read -p "Which one of the special would you like? [1-3] or press any other key t
     elif  (("$specials" == 2))
     then
             echo "Okay, you have selected special #2"
-            echo "    1-Large Meat Lovers Pizza, " >> pythonstuff/reciept.txt
-            echo "    1-Medium Cheese Pizza, " >> pythonstuff/reciept.txt
-            echo "    1-Medium Pepperoni Pizza,">> pythonstuff/reciept.txt
-            echo "    2 2-Liter        for $ 28.00" >> pythonstuff/reciept.txt
+            echo "1-Large Meat Lovers Pizza, " >> pythonstuff/reciept.txt
+            echo "1-Medium Cheese Pizza, " >> pythonstuff/reciept.txt
+            echo "1-Medium Pepperoni Pizza,">> pythonstuff/reciept.txt
+            echo "2 2-Liter        for $ 28.00" >> pythonstuff/reciept.txt
             echo ""
             totalspecial=$(( totalspecial + 28))
             echo " "  >> pythonstuff/reciept.txt
@@ -71,9 +71,9 @@ read -p "Which one of the special would you like? [1-3] or press any other key t
             echo "Okay, you have selected special #3"
             echo " "
             totalspecial=$(( totalspecial + 31))
-            echo "    2-Large Pepperoni Pizza," >> pythonstuff/reciept.txt
-            echo "    2-Large Cheese Pizza"  >> pythonstuff/reciept.txt
-            echo "    2 2-Liter       for $ 31.00"  >> pythonstuff/reciept.txt
+            echo "2-Large Pepperoni Pizza," >> pythonstuff/reciept.txt
+            echo "2-Large Cheese Pizza"  >> pythonstuff/reciept.txt
+            echo "2 2-Liter       for $ 31.00"  >> pythonstuff/reciept.txt
             #If the customer want to select another special pizza to add to there order
             echo " "  >> pythonstuff/reciept.txt
             sleep 1 

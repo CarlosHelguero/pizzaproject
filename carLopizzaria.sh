@@ -439,5 +439,7 @@ echo " "
 
 echo " "
 echo "SUCCESS!"
+sleep 1
 echo "your card has been charged $total.00" 
+sleep 1
 
