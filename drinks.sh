@@ -4,12 +4,12 @@ totals=0
 
 soda()
 {
-echo "1.) Coke         2.00" 
-echo "2.) Sprite       2.00" 
-echo "3.) Mountain Dew 2.00"
-echo "4.) Orange Fanta 2.00" 
-echo "5.) Lemonade     1.00" 
-echo "6.) Sweet-Tea    1.00"
+echo "1.) Coke         $ 2.00" 
+echo "2.) Sprite       $ 2.00" 
+echo "3.) Mountain Dew $ 2.00"
+echo "4.) Orange Fanta $ 2.00" 
+echo "5.) Lemonade     $ 1.00" 
+echo "6.) Sweet-Tea    $ 1.00"
 }
 
 echo "We also have drink options that are available."
